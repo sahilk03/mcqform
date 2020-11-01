@@ -1,38 +1,128 @@
-.App {
+.App{
+  padding:0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+p{
+  line-height: 1rem;
+  font: 14px/10px DINPro;
+  padding : 0 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 100%;
+  height: 100%;	
+  position: relative;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.questions{
+  width: 80%;
+
+}
+
+.options{
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.submit{
+  width: fit-content;
+  height: fit-content;
+  margin: 5% !important;
+}
+.answer{
+  padding: 0 3%;
+}
+.incorrect,.wrong{
+  color: red;
+}
+.correct,.check{
+  color: green;
+}
+
+.missing{
+  color: grey;
+}
+.review{
+  padding :5% 10%;
+}
+.review h2{
+  color: #595656;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.arrow {
+  border: solid #595656;
+  border-width: 0 8px 8px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  z-index: 1;
+}
+
+
+.right {
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  
+}
+.left {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  width: 20px;
+  height: 20px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.right:hover{
+  transform: scale(1.5) rotate(-45deg);
+}
+.left:hover{
+  transform: scale(1.5) rotate(135deg);
 }
